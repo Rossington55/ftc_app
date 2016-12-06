@@ -28,8 +28,7 @@ public class Autonomous extends LinearOpMode {
     private boolean selectRight;
 
 
-    @Override
-    public void runOpMode() throws InterruptedException {
+    @Override public void runOpMode() throws InterruptedException {
         //init motors
         motorRight = hardwareMap.dcMotor.get(motorRight);
         motorLeft = hardwareMap.dcMotor.get(motorLeft);
