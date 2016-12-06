@@ -1,11 +1,9 @@
-**
- * Created by taldonde on 4/12/16.
- */
-package org.firstinspires.ftc.teamcode;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
+// Created by taldonde on 4/12/16.
+ package org.firstinspires.ftc.teamcode;
+ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+ import com.qualcomm.robotcore.hardware.DcMotor;
+ import com.qualcomm.robotcore.hardware.Servo;
 //declare opmode name
 @TeleOp(name="TankDrive", group= "testing")
 //declare class
@@ -74,7 +72,7 @@ public class Autonomous extends LinearOpMode {
             if (selectRight) {
                 rightPower = rawPower - rawDirection;
             } else {
-                rightPower = rawPower
+                rightPower = rawPower;
             }
             if (!selectRight) {
                 leftPower = rawPower - rawDirection;
@@ -92,20 +90,27 @@ public class Autonomous extends LinearOpMode {
                     brush.setDirection(DcMotor.Direction.REVERSE);
                     brushIsReversed = true;
                     brush.setPower(.5);
-                } else {
+                }
+                else {
                     brush.setPower(.5);
                 }
             }
-
-            //brush shoot mode
-            if (gamepad1.b) {
+            else if (gamepad1.b) { // Brush "shooting" setting
                 if (brushIsReversed = true) {
                     brush.setDirection(DcMotor.Direction.REVERSE);
+                    brushIsReversed = false;
                     brush.setPower(.5);
-                } else {
+                }
+                else {
                     brush.setPower(.5);
                 }
             }
+            else {
+                brush.setPower(0);
+            }
+
+
+
             if (gamepad1.dpad_up) {
                 armServo.setPosition(ARM_EXTENDED_POSITION);
             }
