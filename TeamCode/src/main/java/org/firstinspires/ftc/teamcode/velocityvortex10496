@@ -87,7 +87,7 @@ public class Autonomous extends LinearOpMode {
             if (gamepad1.a) {
                 if (brushIsReversed = false) {
                     brush.setDirection(DcMotor.Direction.REVERSE);
-                    brushIsReversed = true;
+                    brushIsReversed = !brushIsReversed;
                     brush.setPower(.5);
                 }
                 else {
@@ -97,7 +97,7 @@ public class Autonomous extends LinearOpMode {
             else if (gamepad1.b) { // Brush "shooting" setting
                 if (brushIsReversed = true) {
                     brush.setDirection(DcMotor.Direction.REVERSE);
-                    brushIsReversed = false;
+                    brushIsReversed = !brushIsReversed;
                     brush.setPower(.5);
                 }
                 else {
