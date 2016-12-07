@@ -104,8 +104,8 @@ public class VuforiaOP extends LinearOpMode {
 
         // vvv You may need to add a + (in mm) to the end of the math.hypot depending on where the centre of turning is on from the robot compared to the phone.
         // Ticks per rotation: AndyMark 20's = 560, AndyMark 40's = 1120
-        motorLeft.setTargetPosition((int)(motorLeft.getCurrentPosition() + ((Math.hypot(trans.get(0), trans.get(2)) /* +  */ ) /  /* wheel circumfrance */ 409.575 *  /* ticks per rotation*/ 560)));
-        motorRight.setTargetPosition((int)(motorRight.getCurrentPosition() + ((Math.hypot(trans.get(0), trans.get(2)) /* +  */ ) /  /* wheel circumfrance */ 409.575 *  /* ticks per rotation*/ 560)));
+        motorLeft.setTargetPosition((int)(motorLeft.getCurrentPosition() + ((Math.hypot(trans.get(0), trans.get(2)) /* +  */ ) /  /* wheel circumfrance */ 409.575 *  /* ticks per rotation*/ 757)));
+        motorRight.setTargetPosition((int)(motorRight.getCurrentPosition() + ((Math.hypot(trans.get(0), trans.get(2)) /* +  */ ) /  /* wheel circumfrance */ 409.575 *  /* ticks per rotation*/ 757)));
 
         motorLeft.setPower(0.3);
         motorRight.setPower(0.3);
