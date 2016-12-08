@@ -43,6 +43,9 @@ public class ExpoTest extends LinearOpMode{ // 'extends' means that it creates a
         while (opModeIsActive()) {
             // Take the value of the Right Stick X for direction, and the Right Stick Y for power.
             // The main idea of this program is to use Math.exp for a curved acceleration.
+            
+            motorLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            motorRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
             rawPower = (Math.exp(gamepad1.right_stick_y));
             rawDirection = (Math.exp(gamepad1.right_stick_x));
