@@ -5,9 +5,9 @@
  import com.qualcomm.robotcore.hardware.DcMotor;
  import com.qualcomm.robotcore.hardware.Servo;
 //declare opmode name
-@TeleOp(name="TankDrive", group= "testing")
+@TeleOp(name="velocityvortex10496", group= "testing")
 //declare class
-public class Autonomous extends LinearOpMode {
+public class velocityvortex10496 extends LinearOpMode {
     //declare motors
     private DcMotor motorRight;
     private DcMotor motorLeft;
