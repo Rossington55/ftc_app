@@ -70,8 +70,14 @@ public class ExpoTest extends LinearOpMode{ // 'extends' means that it creates a
                 leftPower = rawPower;
             }
             else{
-                rightPower = rawPower;
-                leftPower = rawPower - rawDirection;
+                 if (rawPower == 0) {
+                    rightPower = rawPower
+                    leftPower = rawPower + rawDirection;
+                }
+                else {
+                    rightPower = rawPower;
+                    leftPower = rawPower - rawDirection;
+                }
             }
 
             telemetry.addData("rawPower: ", rawPower);
